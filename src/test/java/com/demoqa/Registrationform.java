@@ -10,8 +10,7 @@ import org.junit.jupiter.api.Test;
 import java.io.File;
 
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class Registrationform {
 
@@ -41,7 +40,9 @@ public class Registrationform {
         $("#currentAddress").setValue("Country Region City Street house floor 2 apartment 45");
         $("#react-select-3-input").setValue("Haryana").pressEnter();
         $("#react-select-4-input").setValue("Agra").pressEnter();
-        //$("#submit").scrollIntoView(true).click();
+        //executeJavaScript("$('footer').remove()");
+        $("#submit").scrollTo().pressEnter();
+
 
 
     }
